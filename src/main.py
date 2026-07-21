@@ -30,7 +30,7 @@ while True:
     
     if not peca_passando and leitura_sensorzin < LIMIAR_BLOQUEADO:
         peca_passando = True
-        tempo_bloqueio_inicio = tempo_atual
+        tempo_bloqueio_inicio = time.ticks_ms()
         micro_parada_alertada = False
 
     elif peca_passando and leitura_sensorzin > LIMIAR_LIVRE:
