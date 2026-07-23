@@ -33,7 +33,7 @@ while True:
         tempo_bloqueio_inicio = time.ticks_ms()
         micro_parada_alertada = False
 
-    elif peca_passando and not micro_parada_alertada:
+    if peca_passando and not micro_parada_alertada:
         if time.ticks_diff(tempo_atual, tempo_bloqueio_inicio) > TEMPO_MICRO_PARADA_MS:
             print("Alerta: Micro-parada detectada!")
             micro_parada_alertada = True
