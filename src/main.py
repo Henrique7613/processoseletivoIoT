@@ -26,7 +26,7 @@ print("Contador de Producao Inicializado")
 while True:
     tempo_atual = time.ticks_ms()
 
-    leitura_sensorzin = sensorzin.read_u16()
+    leitura_sensorzin = sensorzin.read()
 
     if not peca_passando and leitura_sensorzin < LIMIAR_BLOQUEADO:
         peca_passando = True
