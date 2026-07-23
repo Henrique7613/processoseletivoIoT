@@ -12,7 +12,7 @@ steps:
       value: 50
 
   # 3. Aguarda o tempo limite estipulado no código para considerar uma micro-parada (Ex: 5 segundos)
-  - delay: 3
+  - delay: 3s
 
   # 4. O sistema deve identificar o tempo excessivo sem variação e disparar o alerta na serial
   # Substitua pela string exata definida no seu código
