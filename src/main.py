@@ -14,7 +14,7 @@ micro_parada_alertada = False
 LIMIAR_BLOQUEADO = 15000
 LIMIAR_LIVRE = 40000
 
-TEMPO_MICRO_PARADA_MS = 5200
+TEMPO_MICRO_PARADA_MS = 3800
 
 estadoAnteriorButanzin = 1
 butanzinPressionadoAviso = False
@@ -52,7 +52,7 @@ while True:
     if time.ticks_diff(tempo_atual, ultimo_tempo_debounce) > ATRASO_DEBOUNCE_MS:
         if leitura_butanzin == 0 and not butanzinPressionadoAviso:
             butanzinPressionadoAviso = True
-            
+            print("Botao pressionado!")
         elif leitura_butanzin == 1 and butanzinPressionadoAviso:
             contador_pecas = 0
             print("Turno resetado com sucesso. Contadores zerados.")
