@@ -41,6 +41,7 @@ while True:
     if peca_passando and leitura_sensorzin > LIMIAR_LIVRE:
         peca_passando = False
         contador_pecas += 1
+        time.sleep_ms(50)
         print(f"Peca detectada! Total: {contador_pecas}")
 
     leitura_butanzin = butanzin.value()
