@@ -14,7 +14,7 @@ micro_parada_alertada = False
 LIMIAR_BLOQUEADO = 15000
 LIMIAR_LIVRE = 40000
 
-TEMPO_MICRO_PARADA_MS = 5000  # 5 segundos
+TEMPO_MICRO_PARADA_MS = 5000
 
 estadoAnteriorButanzin = 1
 butanzinPressionadoAviso = False
@@ -27,14 +27,14 @@ while True:
     tempo_atual = time.ticks_ms()
 
     leitura_sensorzin = sensorzin.read_u16()
-    
+
     if not peca_passando and leitura_sensorzin < LIMIAR_BLOQUEADO:
         peca_passando = True
-        tempo_bloqueio_inicio = time.ticks_ms()
+        tempo_bloqueio_inicio = tempo_atual
         micro_parada_alertada = False
 
     if peca_passando and not micro_parada_alertada:
-        if time.ticks_diff(tempo_atual, tempo_bloqueio_inicio) > TEMPO_MICRO_PARADA_MS:
+        if time.ticks_diff(tempo_atual, tempo_bloqueio_inicio) >= TEMPO_MICRO_PARADA_MS:
             print("Alerta: Micro-parada detectada!")
             micro_parada_alertada = True
 
