@@ -14,7 +14,7 @@ micro_parada_alertada = False
 LIMIAR_BLOQUEADO = 15000
 LIMIAR_LIVRE = 40000
 
-TEMPO_MICRO_PARADA_MS = 3800
+TEMPO_MICRO_PARADA_MS = 3500
 
 estadoAnteriorButanzin = 1
 butanzinPressionadoAviso = False
