@@ -11,7 +11,7 @@ peca_passando = False
 tempo_bloqueio_inicio = 0
 micro_parada_alertada = False
 
-LIMIAR_BLOQUEADO = 15000
+LIMIAR_BLOQUEADO = 18000
 LIMIAR_LIVRE = 40000
 
 TEMPO_MICRO_PARADA_MS = 5000
