@@ -27,6 +27,7 @@ while True:
     tempo_atual = time.ticks_ms()
 
     leitura_sensorzin = sensorzin.read_u16()
+    print(leitura_sensorzin)
 
     if not peca_passando and leitura_sensorzin < LIMIAR_BLOQUEADO:
         peca_passando = True
